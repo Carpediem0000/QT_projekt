@@ -9,7 +9,7 @@ Employee::Employee()
     setName("undefined");
     setSurname("undefined");
     setPosition("undefined");
-    this->status = true;
+    //this->status = true;
 }
 
 Employee::Employee(string name, string surname, string position)
@@ -19,7 +19,7 @@ Employee::Employee(string name, string surname, string position)
     setName(name);
     setSurname(surname);
     setPosition(position);
-    this->status = true;
+    //this->status = true;
 }
 
 Employee::~Employee()
@@ -42,13 +42,13 @@ void Employee::setPosition(string position)
 }
 
 
-void Employee::changeStatus()
-{
-    if (status)
-        this->status = false;
-    else
-        this->status = true;
-}
+//void Employee::changeStatus()
+//{
+//    if (status)
+//        this->status = false;
+//    else
+//        this->status = true;
+//}
 
 
 void Employee::setStaticCounter(int ind)
@@ -76,10 +76,10 @@ string Employee::getPosition() const
     return position;
 }
 
-bool Employee::getStatus() const
-{
-    return status;
-}
+//bool Employee::getStatus() const
+//{
+//    return status;
+//}
 
 
 int Employee::getIndex() const
@@ -98,14 +98,14 @@ void Employee::show() const
     cout << "Surname: " << surname << endl;
     cout << "Position: " << position << endl;
     cout << "Status: ";
-    if (status)
-    {
-        cout << GREEN_COLOR << "work" << RESET_COLOR << endl;
-    }
-    else
-    {
-        cout << RED_COLOR << "weekend" << RESET_COLOR << endl;
-    }
+//    if (status)
+//    {
+//        cout << GREEN_COLOR << "work" << RESET_COLOR << endl;
+//    }
+//    else
+//    {
+//        cout << RED_COLOR << "weekend" << RESET_COLOR << endl;
+//    }
 }
 
 void Employee::saveBinary(ofstream& file) const {
@@ -124,7 +124,7 @@ void Employee::saveBinary(ofstream& file) const {
     file.write(reinterpret_cast<const char*>(&positionSize), sizeof(positionSize));
     file.write(position.c_str(), positionSize + 1);
 
-    file.write(reinterpret_cast<const char*>(&status), sizeof(status));
+    //file.write(reinterpret_cast<const char*>(&status), sizeof(status));
 }
 
 
@@ -150,5 +150,5 @@ void Employee::loadBinary(ifstream& file) {
     file.read(positionBuffer, positionSize + 1);
     position = positionBuffer;
 
-    file.read(reinterpret_cast<char*>(&status), sizeof(status));
+    //file.read(reinterpret_cast<char*>(&status), sizeof(status));
 }

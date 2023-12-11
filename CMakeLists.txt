@@ -28,7 +28,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         main_class/ContractEmployee.h main_class/ContractEmployee.cpp
         main_class/Division.h main_class/Division.cpp
         main_class/Company.h main_class/Company.cpp
-        companytreemodel.h companytreemodel.cpp
+        companywidget.h companywidget.cpp
+        addfulltimeemployeedialog.h addfulltimeemployeedialog.cpp addfulltimeemployeedialog.ui
+        addcontractemployeedialog.h addcontractemployeedialog.cpp addcontractemployeedialog.ui
+        editcontractemployeedialog.h editcontractemployeedialog.cpp editcontractemployeedialog.ui
+        editfulltimeemployeedialog.h editfulltimeemployeedialog.cpp editfulltimeemployeedialog.ui
+
 
     )
 # Define target properties for Android with Qt 6 as:

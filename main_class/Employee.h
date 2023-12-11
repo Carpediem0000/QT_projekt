@@ -15,7 +15,7 @@ protected:
     string name;
     string surname;
     string position;
-    bool status;
+    //bool status;
 public:
     Employee();
     Employee(string name, string surname, string position);
@@ -24,14 +24,14 @@ public:
     void setName(string name);
     void setSurname(string surname);
     void setPosition(string position);
-    void changeStatus();
+    //void changeStatus();
     static void setStaticCounter(int ind);
     const static int getStaticCounter();
 
     string getName()const;
     string  getSurname()const;
     string getPosition()const;
-    bool getStatus()const;
+    //bool getStatus()const;
     int getIndex()const;
 
     virtual string type()const = 0;
